@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Moments</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url("/static/images/base.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;  /* Shift content to the right */
+            padding-right: 80px;       /* Add spacing from right edge */
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.65);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #5c3a57;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #6d4c59;
+        }
+
+        a.button {
+            display: inline-block;
+            background: #ffffffcc;
+            color: #5c3a57;
+            padding: 15px 35px;
+            margin: 10px 15px 0 0;
+            text-decoration: none;
+            border: 2px solid #d48fb0;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a.button:hover {
+            background-color: #d48fb0;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Capture Moments</h1>
+        <p>Your go-to platform for booking photographers!</p>
+        <a href="/book" class="button">Book a Photographer</a>
+        <a href="/show-photographers" class="button">View Photographers</a>
+    </div>
+</body>
+</html>
