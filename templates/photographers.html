@@ -24,19 +24,32 @@
     p {
       color: #555;
     }
+    img {
+      margin-top: 10px;
+      border-radius: 4px;
+      width: 200px;
+      height: auto;
+    }
   </style>
 </head>
 <body>
   <h2>Available Photographers</h2>
+
   {% for p in photographers %}
     <div class="card">
-      <h3>{{ p.name }}</h3>
-      <p><strong>ID:</strong> {{ p.id }}</p>
-      <p><strong>Skills:</strong> {{ p.skills | join(', ') }}</p>
-      <p><strong>Availability:</strong> {{ availability_data[p.id] }}</p>
-      <img src="{{ url_for('static', filename='images/' + p.image) }}" width="200">
+      <h3>{{ p['Name'] }}</h3>
+      <p><strong>ID:</strong> {{ p['photographer_id'] }}</p>
+      <p><strong>Skills:</strong> {{ p['Skills'] }}</p>
+      <p><strong>Availability:</strong> {{ p['availability'] | join(', ') }}</p>
+
+      {% if p['Photo'] %}
+        <img src="{{ p['Photo'] }}" alt="{{ p['Name'] }}">
+      {% else %}
+        <p>No image available</p>
+      {% endif %}
     </div>
   {% endfor %}
+
   <a href="/" style="display: inline-block; margin-top: 20px;">← Back to Home</a>
 </body>
 </html>
